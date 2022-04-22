@@ -12,7 +12,7 @@ class BottomBarScreen extends StatelessWidget {
     return BlocBuilder<BottomNavigationBarCubit, BottomNavigationBarState>(
       builder: (context, state) {
         return Scaffold(
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.white,
           body: bottomBarCubit.screens[bottomBarCubit.selectedIndex],
           bottomNavigationBar: const BottomBarWidget(),
         );
