@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:ui_design/business_logic/cubits/page_view/page_view_cubit.dart';
-import 'package:ui_design/resoures.dart';
+import 'package:ui_design/resources.dart';
 
 class CardPageView extends StatelessWidget {
   const CardPageView({Key? key}) : super(key: key);

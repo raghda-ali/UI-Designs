@@ -12,7 +12,7 @@ class CourseModel {
 List<CourseModel> courses = [
   CourseModel(name: "All courses", ),
       // isSelected: true),
-  CourseModel(name: "Coding",),
+  CourseModel(name: "Coding ",),
       // isSelected: false),
   CourseModel(name: "Design",),
       // isSelected: false),
