@@ -1,6 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ui_design/business_logic/cubits/courses/courses_cubit.dart';
 import 'package:ui_design/business_logic/cubits/page_view/page_view_cubit.dart';
 import 'package:ui_design/business_logic/utility/app_bloc_observer.dart';
 import 'package:ui_design/presentation/router/router_imports.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
           create: (context) => PageViewCubit(),
         ),
         BlocProvider(create: (create) => BottomNavigationBarCubit()),
+        BlocProvider(create: (create) => CoursesCubit()),
       ],
       child: MaterialApp(
         onGenerateRoute: appRouter?.generateRoute,
