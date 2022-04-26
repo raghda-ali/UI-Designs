@@ -64,7 +64,7 @@ class OnlineCourses extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height,
+                height: MediaQuery.of(context).size.height * 0.5,
                 child: ListView.builder(
                   shrinkWrap: true,
                   itemCount: 3,

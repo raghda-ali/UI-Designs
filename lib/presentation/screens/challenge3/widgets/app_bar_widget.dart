@@ -21,7 +21,7 @@ class AppBarWidget extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: MediaQuery.of(context).size.width * 0.6,
+              width: MediaQuery.of(context).size.width * 0.5,
               child: const Text(
                 "Raghda Ali",
                 overflow: TextOverflow.ellipsis,

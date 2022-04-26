@@ -1,36 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:ui_design/widgets/custom_text_field.dart';
 
 class SearchTextField extends StatelessWidget {
   const SearchTextField({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController searchController = TextEditingController();
+    FocusNode focusNode = FocusNode();
     return Padding(
-      padding: const EdgeInsets.only(top: 25,),
+      padding: const EdgeInsets.only(
+        top: 25,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
-            child: TextField(
-              decoration: InputDecoration(
-                labelText: "Search any course",
-                fillColor: Colors.grey[50],
-                filled: true,
-                prefixIcon: const Icon(Icons.search_outlined),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(color: Colors.white),
-                  borderRadius: BorderRadius.circular(25.7),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(
-                    color: Colors.transparent,
-                  ),
-                  borderRadius: BorderRadius.circular(30),
-                ),
-              ),
+            child: CustomTextField(
+              controller: searchController,
+              labelText: "Search any course",
+              prefixIcon: const Icon(Icons.search_outlined),
+              fillColor: Colors.grey[50],
+              focusNode: focusNode,
+              focusedBorderRadius: 30,
+              enabledBorderRadius: 30,
             ),
           ),
           Container(
