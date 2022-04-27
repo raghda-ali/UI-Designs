@@ -5,6 +5,7 @@ import 'package:ui_design/business_logic/cubits/courses/courses_cubit.dart';
 import 'package:ui_design/business_logic/cubits/page_view/page_view_cubit.dart';
 import 'package:ui_design/business_logic/utility/app_bloc_observer.dart';
 import 'package:ui_design/presentation/router/router_imports.dart';
+import 'package:ui_design/presentation/screens/challenge4/challenge4.dart';
 import 'package:ui_design/widgets/bottom_bar_screen/bottom_bar_screen.dart';
 
 import 'business_logic/cubits/bottom_navigation_bar/bottom_navigation_bar_cubit.dart';
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const BottomBarScreen(),
+        home: const ChallengeFour(),
       ),
     );
   }

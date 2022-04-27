@@ -7,6 +7,6 @@ class Resources {
   static const String design = "assets/images/design.jpg";
   static const String coding = "assets/images/coding.jpg";
   static const String person = "assets/images/person.jpg";
-  static const String webImage ="assets/images/web_image.png";
-
+  static const String webImage = "assets/images/web_image.png";
+  static const String chair = "assets/images/chair.png";
 }
