@@ -30,10 +30,10 @@ class Cards extends StatelessWidget {
         child: Center(
           child: Container(
             margin: const EdgeInsets.all(10),
-            height: 100,
+            height: 60,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-              color: Colors.red,
+              color: Colors.blue[50],
               borderRadius: BorderRadius.circular(10),
             ),
             child: const Center(

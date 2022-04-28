@@ -21,6 +21,7 @@ class ChallengeFour extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
+            iconSize: 30,
             icon: const Icon(
               Icons.search_outlined,
               color: Colors.black,
@@ -30,6 +31,7 @@ class ChallengeFour extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.menu),
           color: Colors.black,
+          iconSize: 30,
           onPressed: () {},
         ),
       ),
@@ -102,14 +104,28 @@ class ChallengeFour extends StatelessWidget {
               Positioned(
                 bottom: 0,
                 right: 0,
-                child: Container(
-                  color: Colors.black,
-                  width: 70,
-                  height: 65,
-                  child: const Icon(
-                    Icons.shopping_basket_outlined,
-                    color: Colors.white,
-                  ),
+                child: Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+                    Container(
+                      color: Colors.black,
+                      width: 70,
+                      height: 65,
+                      child: const Icon(
+                        Icons.shopping_basket_outlined,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Positioned(
+                      top: 35,
+                      right: 55,
+                      child: Container(
+                        height: 1,
+                        width: 55,
+                        color: Colors.blueGrey[300],
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
