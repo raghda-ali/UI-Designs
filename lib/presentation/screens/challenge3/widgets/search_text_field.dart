@@ -8,13 +8,14 @@ class SearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextEditingController searchController = TextEditingController();
+    OverlayEntry? entry;
     FocusNode focusNode = FocusNode();
     void showOverlay(BuildContext context) {
-      OverlayEntry? entry = OverlayEntry(
-        builder: (context) => const FilterList(),
+       entry = OverlayEntry(
+        builder: (context) =>  FilterList(onPressed: entry!.remove),
       );
       final overlay = Overlay.of(context);
-      overlay?.insert(entry);
+      overlay?.insert(entry!);
       // await Future.delayed(Duration(seconds: 2));
       // entry.remove();
     }
