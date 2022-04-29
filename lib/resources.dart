@@ -9,4 +9,5 @@ class Resources {
   static const String person = "assets/images/person.jpg";
   static const String webImage = "assets/images/web_image.png";
   static const String chair = "assets/images/chair.png";
+  static const String course = "assets/images/course.png";
 }

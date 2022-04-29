@@ -5,6 +5,7 @@ import 'package:ui_design/presentation/screens/challenge1/challenge1.dart';
 import 'package:ui_design/presentation/screens/challenge2/challenge2.dart';
 import 'package:ui_design/presentation/screens/challenge3/online_courses.dart';
 import 'package:ui_design/presentation/screens/challenge4/challenge4.dart';
+import 'package:ui_design/presentation/screens/challenge5/my_courses.dart';
 
 part 'bottom_navigation_bar_state.dart';
 
@@ -14,7 +15,7 @@ class BottomNavigationBarCubit extends Cubit<BottomNavigationBarState> {
   List<Widget> screens = const [
     OnlineCourses(),
     Cards(),
-    Challenge1(),
+    MyCourses(),
     ChallengeFour(),
   ];
 
