@@ -10,8 +10,8 @@ class FilterList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: 170,
-      right: 30,
+      top: 180,
+      right: 20,
       child: Material(
         color: Colors.transparent,
         child: Container(
@@ -55,7 +55,7 @@ class FilterList extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                height: 40,
+                height: 25,
               ),
               const Text(
                 "interests",
