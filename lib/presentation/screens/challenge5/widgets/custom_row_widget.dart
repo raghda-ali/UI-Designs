@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:liquid_progress_indicator/liquid_progress_indicator.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:ui_design/resources.dart';
 
 class CustomRowWidget extends StatelessWidget {
-  final String? title;
-  final String? image;
-  final String? subTitle;
+  final String title;
+  final String image;
+  final String subTitle;
 
   const CustomRowWidget({
     Key? key,
-    this.title,
-    this.image,
-    this.subTitle,
+    required this.title,
+    required this.image,
+    required this.subTitle,
   }) : super(key: key);
 
   @override
@@ -33,7 +34,7 @@ class CustomRowWidget extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
-                  image: AssetImage(image ?? Resources.design),
+                  image: AssetImage(image),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -48,7 +49,7 @@ class CustomRowWidget extends StatelessWidget {
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.5,
                 child: Text(
-                  title ?? "",
+                  title,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
@@ -62,8 +63,8 @@ class CustomRowWidget extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      width: 15,
-                      height: 15,
+                      width: 20,
+                      height: 17,
                       decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
@@ -78,7 +79,7 @@ class CustomRowWidget extends StatelessWidget {
                     SizedBox(
                       width: MediaQuery.of(context).size.width * 0.5,
                       child: Text(
-                        subTitle ?? "",
+                        subTitle,
                         overflow: TextOverflow.ellipsis,
                         maxLines: 1,
                         style: const TextStyle(
@@ -94,17 +95,17 @@ class CustomRowWidget extends StatelessWidget {
               SizedBox(
                 height: 20,
                 width: 150,
-                child: ClipRRect(
-                  child: LiquidLinearProgressIndicator(
-                    value: 0.5,
-                    valueColor: const AlwaysStoppedAnimation(Colors.green),
-                    backgroundColor: Colors.grey[300],
-                    borderColor: Colors.transparent,
-                    borderWidth: 10.0,
-                    borderRadius: 20.0,
-                    direction: Axis.horizontal,
-                    center: const Text("50%"),
+                child: LinearPercentIndicator(
+                  width: 140.0,
+                  lineHeight: 14.0,
+                  percent: 0.6,
+                  backgroundColor: Colors.grey[300],
+                  progressColor: Colors.green,
+                  center: const Text(
+                    "60.0%",
+                    style: TextStyle(fontSize: 12.0),
                   ),
+                  animation: true,
                 ),
               ),
             ],

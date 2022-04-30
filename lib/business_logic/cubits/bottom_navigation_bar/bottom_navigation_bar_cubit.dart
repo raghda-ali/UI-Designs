@@ -14,8 +14,8 @@ class BottomNavigationBarCubit extends Cubit<BottomNavigationBarState> {
   int selectedIndex = 0;
   List<Widget> screens = const [
     OnlineCourses(),
-    Cards(),
     MyCourses(),
+    Cards(),
     ChallengeFour(),
   ];
 
